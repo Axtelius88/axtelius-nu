@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26384d">
+  <title>Axtelius · Öresund</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      color: #fff;
+      background: #26384d;
+    }
+
+    main {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.22)),
+        url("background.jpg") center / cover no-repeat;
+    }
+
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 2px 20px rgba(0,0,0,.28);
+      animation: fade-in 1.4s ease-out both;
+    }
+
+    h1 {
+      margin: 0;
+      padding-left: .22em;
+      font-size: clamp(2.7rem, 9vw, 7rem);
+      font-weight: 300;
+      letter-spacing: .22em;
+      line-height: 1;
+    }
+
+    .line {
+      width: 4.5rem;
+      height: 1px;
+      margin: 2rem auto 1.8rem;
+      background: rgba(255,255,255,.85);
+    }
+
+    p {
+      margin: 0;
+      padding-left: .5em;
+      font-size: clamp(.9rem, 2.2vw, 1.55rem);
+      font-weight: 300;
+      letter-spacing: .5em;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .title { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="title">
+      <h1>Axtelius</h1>
+      <div class="line" aria-hidden="true"></div>
+      <p>Öresund</p>
+    </div>
+  </main>
+</body>
+</html>
